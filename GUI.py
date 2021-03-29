@@ -26,6 +26,7 @@ class GUI:
         self.quit = 'n'
 
     def build(self):
+        self.root.title(basename(self.img_path))
         size = str(self.w) + 'x' + str(self.h)
         self.root.geometry(size)
 
@@ -188,7 +189,7 @@ class GUI:
 
 
 if __name__ == '__main__':
-    gui = GUI('/home/vegeta/Desktop/PrepareDataVnOCR/data/00029.jpg')
+    gui = GUI('data/00029.jpg')
     _, c = gui.run()
     gui.print_points()
     if c == 'p':
